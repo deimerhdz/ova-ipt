@@ -1,0 +1,120 @@
+.shooting{
+    background-color: #edf0f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    .level1{
+        height: 40px;
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        background: repeating-linear-gradient(
+        45deg,
+      rgba(0, 0, 0, 0) 34px,
+      rgba(0, 0, 0, 0) 20px,
+      #abc3f4 42px,
+      #abc3f4 20px
+    );
+    border: 2px solid #2b2b2b;
+        // background-color: #abc3f4;
+    }
+    
+    hr{
+    width: 100%;
+     height: 0;
+     border: medium none;
+     margin-top: 0.5rem;
+    
+    }
+    .dashed{
+        border-top: 2px dashed #2b2b2b !important
+    }
+    .solid{
+        border-top: 2px solid #2b2b2b !important
+    }
+    .dashed--xl{
+        border-top: dashed 4px #2b2b2b !important
+    }
+    .dashed--md{
+        border-top: dashed 3px #2b2b2b !important
+    }
+    .oval{
+        margin-top: 1rem;
+        width: 350px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        background: #abc3f4;
+    }
+    .success{
+        border:2px solid rgb(19, 140, 19);
+    }
+    .error{
+        border:2px solid rgb(222, 31, 31);
+    }
+    .level2{
+        height: 20px;
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        border: 2px solid #2b2b2b;
+        background: white;
+    }
+    .arrow{
+        height: 90px;
+    }
+
+}
+.items{
+    border: 2px solid #2b2b2b;
+    height: 100%;
+    width: 100%;
+    .item-element{
+        background-color: white;
+        cursor: pointer;
+        padding: 0.5rem 2.5rem;
+        outline: 1px solid #ccc;
+    }
+}
+.border-in{
+    border: 1px solid #2b2b2b;
+    -webkit-box-shadow: inset 0 0 0 1px #2b2b2b;
+    -moz-box-shadow: inset 0 0 0 1px #2b2b2b;
+    box-shadow: inset 0 0 0 1px #2b2b2b;
+}
+
+.board{
+    display: grid;
+ justify-content: space-between;
+    grid-template-columns: 70% 29%;
+}
+.item{
+    font-size: 14px;
+}
+.field{
+    background: white;
+    display: flex;
+    height: 30px;
+    cursor: pointer;
+    width: 250px;
+    justify-content: center;
+    outline: 1px solid #ccc;
+}
+input{
+    cursor: pointer;
+}
+
+button{
+    padding: 1rem;
+    border-radius: 4px;
+    color: white;
+    background: #0066d0;
+    border: 0px;
+    margin-top: 0.5rem;
+}

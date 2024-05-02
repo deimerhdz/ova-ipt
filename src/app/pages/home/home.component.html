@@ -1,0 +1,140 @@
+<app-nav></app-nav>
+<div class="container">
+    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/DZ2syRXQd5HUTn?startSlide=1" width="100%" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe><div style="margin-bottom:5px"><strong><a href="https://es.slideshare.net/slideshow/instruccion-preparatoria-de-tiro-pptx/267739035" title="INSTRUCCION PREPARATORIA DE TIRO .pptx" target="_blank">INSTRUCCION PREPARATORIA DE TIRO .pptx</a></strong></div>
+    <h3 class="title">Actividades</h3>
+    <div class="test">
+        <iframe allow="fullscreen; autoplay;" allowfullscreen width="100%" height="690" frameborder="0" src="https://es.educaplay.com/juego/18886376-examen_instruccion_preparatorio_de_tiro.html"></iframe>
+    </div>
+
+    <app-header></app-header>
+    <div class="board">
+        <div class="shooting border-in">
+            <div
+            cdkDropList
+            id="level1"
+            #firstList="cdkDropList"
+            [cdkDropListData]="level1"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class="field example-list"
+            (cdkDropListDropped)="drop($event)"
+            >
+            @for (item of level1; track item) {    
+            <input [value]="item"  #opcionOne  class="" [cdkDragData]="item" cdkDrag  />
+             }
+            </div>
+            
+            <hr class="line dashed">
+            <div class="level1"></div>
+            <div
+            cdkDropList
+            id="level2"
+            #secondList="cdkDropList"
+            [cdkDropListData]="level2"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class="field example-list"
+            (cdkDropListDropped)="drop($event)">
+            @for (item of level2; track item) {    
+                <input  #opcionTwo class="item" [cdkDragData]="item" cdkDrag [value]="item" />
+             }
+            </div>
+            <div class="level2"></div>
+            <div
+            cdkDropList
+            id="level3"
+            #thirdList="cdkDropList"
+            [cdkDropListData]="level3"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class=" field example-list"
+            (cdkDropListDropped)="drop($event)">
+            @for (item of level3; track item) {    
+                <input #opcionThree class="item" [cdkDragData]="item" cdkDrag [value]="item" />
+             }
+            </div>
+            <img class="arrow" src="../../../assets/Arrow1.png" alt="arrow">
+            <div
+            cdkDropList
+            id="level4"
+            #fourList="cdkDropList"
+            [cdkDropListData]="level4"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class=" field example-list"
+            (cdkDropListDropped)="drop($event)">
+            @for (item of level4; track item) {    
+                <input #opcionFour class="item" [cdkDragData]="item" cdkDrag [value]="item" />
+             }
+            </div>
+            <img class="arrow" src="../../../assets/line.png" alt="line">
+       
+            <div
+            cdkDropList
+            #fiveList="cdkDropList"
+            [cdkDropListData]="level5"
+            id="level5"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class=" field example-list"
+            (cdkDropListDropped)="drop($event)">
+            @for (item of level5; track item) {    
+                <input  #opcionFive class="item" [cdkDragData]="item" cdkDrag [value]="item" disabled="true" />
+             }
+            </div>
+            <hr class="line solid">
+            <div
+            cdkDropList
+            #sixList="cdkDropList"
+            [cdkDropListData]="level6"
+            id="level6"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class=" field example-list"
+            (cdkDropListDropped)="drop($event)">
+            @for (item of level6; track item) {    
+                <input #opcionSix class="item" [cdkDragData]="item" cdkDrag [value]="item" />
+             }
+            </div>
+            <hr class="line dashed--xl">
+            <div
+            cdkDropList
+            #sevenList="cdkDropList"
+            [cdkDropListData]="level7"
+            id="level7"
+            [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+            class="field"
+            (cdkDropListDropped)="drop($event)">
+            @for (item of level7; track item) {    
+                <input #opcionSeven class="item" [cdkDragData]="item" cdkDrag [value]="item" />
+             }
+            </div>
+            <hr class="line dashed--md">
+            <div class="oval">
+                <div
+                cdkDropList
+                #eightList="cdkDropList"
+                id="level8"
+                [cdkDropListData]="level8"
+                [cdkDropListConnectedTo]="[doneList,firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+                class="field"
+                (cdkDropListDropped)="drop($event)">
+                @for (item of level8; track item) {    
+                    <input #opcionEight  class="item" [cdkDragData]="item" cdkDrag [value]="item" />
+                 }
+                </div>
+            </div>
+       
+        </div>
+        <div class="items"   
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="items"
+        [cdkDropListConnectedTo]="[firstList,secondList,thirdList,fourList,fiveList,sixList,sevenList,eightList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+            <h1>Puntos {{point}}</h1>
+            @for (item of items; track item) {
+                <div   class="field" [cdkDragData]="item" cdkDrag>{{item}}</div>
+              }
+           
+              <button (click)="submit()">Comprobar</button>&nbsp;
+              <button (click)="reset()">restablecer</button>
+        </div>
+    </div>
+
+</div>
